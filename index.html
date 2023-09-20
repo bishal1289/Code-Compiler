@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copiler Using JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.24.1/ace.js" type="text/javascript" charset="utf-8"></script>
+    
+    <style>
+        #editor{
+            height: 450px;
+            width: 100%;
+            
+        }
+    </style>
+</head>
+<body>
+    <select id="languageSelector" style="margin-bottom:10px ;">
+        <option>JavaScript</option>
+        <option>Java</option>
+        <option>C</option>
+        <option>C++</option>
+        <option>Python</option>
+    </select>
+
+    <div id="editor"></div>
+    <script>
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/twinlight");
+    document.getElementById('editor').style.fontSize='19px';
+    editor.session.setMode("ace/mode/java");
+    
+    </script>
+
+    <div id="output" style="background-color: black; height: 150px;">
+        <h3 style="color: white;" id="h2">OUTPUT:</h3> 
+    </div>
+
+    <button id="compile" style="background-color: orange;color: white; margin-top: 10px; border: none;height: 40px; width: 80px;font-size: 1rem;border-radius: 5px;cursor: pointer;">Compile</button>
+
+    
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
